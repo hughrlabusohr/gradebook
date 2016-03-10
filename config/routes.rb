@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  get 'dashboards/show'
+
   resources :students
-  root 'teachers#index'
+  root 'dashboards#show'
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'

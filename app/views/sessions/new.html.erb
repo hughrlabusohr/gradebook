@@ -6,7 +6,7 @@
 
 <%= form_tag(login_path) do %>
   <p>
-    <%= radio_button_tag(:user_type, "Teacher") %>
+    <%= radio_button_tag(:user_type, "Teacher", checked=true) %>
     <%= label_tag(:teacher, "Teacher") %>
     <%= radio_button_tag(:user_type, "Student") %>
     <%= label_tag(:student, "Student") %>
