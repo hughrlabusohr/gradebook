@@ -66,6 +66,8 @@ class GradesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_grade
       @grade = Grade.find(params[:id])
+      unless @student.teacher_id == session[:user_id] || @
+      redirect_to :back
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
