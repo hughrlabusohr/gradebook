@@ -1,4 +1,4 @@
 class Grade < ActiveRecord::Base
   belongs_to :student
-  belongs_to :teacher
+  validates :student, presence: true
 end

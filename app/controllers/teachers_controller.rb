@@ -1,5 +1,6 @@
 class TeachersController < ApplicationController
-  before_action :authenticate
+  before_action :logged_in?
+  before_action :logged_in_as_teacher?
   before_action :set_teacher, only: [:show, :edit, :update, :destroy]
 
 

@@ -1,11 +1,10 @@
-class CreateStudents < ActiveRecord::Migration
+class CreateParents < ActiveRecord::Migration
   def change
-    create_table :students do |t|
+    create_table :parents do |t|
       t.string :name
-      t.integer :teacher_id
-      t.integer :parent_id
       t.string :email
       t.string :password_digest
+      t.integer :student_id
 
       t.timestamps null: false
     end
